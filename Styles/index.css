@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.sectionn{
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.sectionn h1
+{
+    position: relative;
+    color: black ;
+    font-size: 8em;
+    text-transform: uppercase;
+    font-weight: 400;
+    z-index: 2;
+    transition: 2s;
+}
+
+.sectionn h1:hover{
+    color: beige;
+    filter: blur(10px);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.sectionn img{
+    width: 140%;
+    height: 140%;
+    top: -300px;
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    filter: blur(20px);
+    transition: 2s;
+}
+
+.sectionn h1:hover ~ img
+{
+    width: 100%;
+    height: 100%;
+    top: 0px; 
+    filter: blur(0px);
+
+}
+
+/*Experiencia-------------------------------------------*/
+
+#introduccion {
+    font-family: 'Open Sans Condensed';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: #342909;
+}
+
+#introduccion>div>div>div>h2 {
+    font-family: 'Open Sans Condensed';
+    color: #d1a223;
+}
+
+/*ABOUT ME*/
+
+#texto {
+    font-family: 'Open Sans Condensed';
+    background-color: #f3bfa7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #342909;
+}
+
+#texto>div>h2 {
+    color: #342909;
+}
+
+/*#texto>div>p{
+    
+}*/
+
+/*#texto>.container {
+    
+}*/
+
+#mifoto {
+    height: 100vh;
+    background-image: url(../img/perfil\ zoom.jpg);
+    background-size: 760px 760px;
+    background-repeat: no-repeat;
+    background-position: 760px;
+    background-attachment: fixed;
+}
+
+/*-----------HARDSKILLS..---------.............---------.......*/
+
+#skills {
+    width: 100%;
+    height: 100vh;
+    color: #342909;
+}
+
+#skills>div>.crudo>.centrar {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+#skills>div>.crudo>.centrar>.iconos {
+    font-size: 80px;
+    margin-bottom: 15px;
+    color: #d1a223;
+}
+
+#skills>div>.crudo>.centrar>.iconos2 {
+    font-size: 80px;
+    margin-bottom: 15px;
+    color: #f3bfa7;
+}
+
+/*---------------FOOTER-----------*/
+
+footer {
+    margin-top: 100px;
+    background-color: #d1a223;
+}
+
+footer p {
+    text-align: center;
+    text-decoration: none;
+}
+
+footer>div>.redes {
+    margin-bottom: 0px;
+}
+
+footer>div>.redes>p .author {
+    text-decoration: none;
+    color: #342909;
+    font-weight: bolder;
+    transition: all 0.5s;
+}
+
+footer>div>.redes>p .author:hover {
+    color: beige;
+    transition: all 0.5s;
+}
+
+footer>div>.redes>a {
+    font-size: 45px;
+    border-radius: 15px;
+    color: #342909;
+    text-align: center;
+    transition: .5s ease all;
+}
+
+footer>div>.redes>a>i {
+    width: 50px;
+    line-height: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 100px;
+}
+
+footer>div>.redes>.instagram:hover, .facebook:hover, .behance:hover {
+    color: beige;
+}
+
+footer>div>.redes>a>i:hover {
+    animation: icono .5s ease;
+}
+
+@keyframes icono {
+    from {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    to {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+
+/*------------RESPONSIVE--------------*/
+
+@media screen and (max-width:700px) {
+    #inicio>h1>a {
+        font-size: 50px;
+    }
+    #inicio>h1>a:hover {
+        padding: 0px 20px;
+        background-color: #2424248a;
+        color: #e2e2e0;
+    }
+    .aside {
+        width: 50%;
+        margin: auto;
+        padding: 0px;
+    }
+    #aside>h3>a, .enlace {
+        margin: 10px;
+    }
+    #texto {
+        text-align: center;
+        font-family: 'Open Sans Condensed';
+        background-color: #f3bfa7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        color: white;
+    }
+    #texto>div>h2 {
+        color: #342909;
+    }
+    #mifoto {
+        background-color: #f3bfa7;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        height: 50vh;
+    }
+    #texto>.container {
+        padding-top: 70px;
+    }
+}
